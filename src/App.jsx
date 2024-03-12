@@ -1,13 +1,20 @@
 
 import './App.css'
+import Blogs from './components/blogsData/Blogs'
+import BookMark from './components/bookMark/BookMark'
+import Header from './components/header/Header'
 
 function App() {
 
 
   return (
-    <div className=''>hello</div>
-
- 
+    <div className='w-[90%] mx-auto'>
+    <Header></Header>
+    <div className='md:flex md:gap-5'>
+    <Blogs></Blogs>
+    <BookMark></BookMark>
+    </div>
+    </div>
   )
 }
 
