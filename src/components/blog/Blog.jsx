@@ -4,7 +4,7 @@ const Blog = (props) => {
 
     const {author,id,name,post_date,profile_img,reading_time,title,description,image}=props.blog;
 
-  return <div className="w-[90%] mx-auto my-10  bg-[#6047EC1A] p-5 rounded-md">
+  return <div className="w-[90%] mx-auto  bg-[#6047EC1A] p-5 rounded-md">
     <img className="w-full rounded-md h-[400px]" src={image} alt={name} />
     <div className="space-y-4">
         <div className="md:flex justify-between space-y-3 items-center">
@@ -17,7 +17,7 @@ const Blog = (props) => {
 
         </div>
         <div>
-            <h2 className="text-[#11111199] text-2xl ">0{reading_time} min read <CiSaveDown1 className=" inline-block text-3xl text-green-500" /></h2>
+            <h2 className="text-[#11111199] text-2xl ">{reading_time > 9 ?  `${reading_time}`:`0${reading_time}`} min read <CiSaveDown1 className=" inline-block text-3xl text-green-500" /></h2>
         </div>
         </div>
         <h3 className="text-[#11111199] text-lg font-semibold">{title}</h3>
