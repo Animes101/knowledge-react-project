@@ -14,7 +14,7 @@ const Blogs = () => {
         .then(data=>setBlogs(data))
 
     },[])
-  return <div className="md:w-2/3 border border-black">
+  return <div className="md:w-2/3">
     {blogs.map(blog=><Blog key={blog.id} blog={blog}></Blog>)}
   </div>;
 };
